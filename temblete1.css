@@ -1,0 +1,558 @@
+*
+{
+    box-sizing: border-box;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    font-family: "Work Sans", sans-serif;
+}
+.container
+{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* small */
+@media (min-width: 768px)
+{
+    .container
+    {
+        width: 750px;
+    }
+}
+/* medium */
+@media (min-width: 992px)
+{
+    .container
+    {
+        width: 970px;
+    }
+}
+/* large */
+@media (min-width: 1200px)
+{
+    .container
+    {
+        width: 1170px;
+    }
+}
+.header
+{
+    padding: 20px;
+}
+.header .container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header img
+{
+    width: 60px;
+    cursor: pointer;
+}
+.header .links
+{
+    position: relative;
+}
+.header .links .icon
+{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header .links .icon span
+{
+    background-color: rgb(80, 78, 78);
+    margin-bottom: 5px;
+    height: 2px;
+}
+.header .links .icon span:first-child
+{
+    width: 100%;
+}
+.header .links .icon span:nth-child(2)
+{
+    width: 60%;
+    transition: all .4s ease-in-out;
+}
+.header .links .icon span:last-child
+{
+    width: 100%;
+}
+.header .links .icon span:nth-child(2):hover
+{
+    width: 100%;
+    cursor: pointer;
+}
+.header .links ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 20px);
+    display: none; 
+    transition: all .3s ease-in-out;
+    z-index: 1;
+}
+.header .links:hover ul
+{
+    display: block;
+}
+.header .links ul::before
+{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    top: -20px;
+    right: 5px;
+}
+.header .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: all .3s ease-in-out;
+}
+.header .links ul li a:hover
+{
+    padding-left: 25px;
+    color: blue;
+}
+.header .links ul li:not(last-child)
+{
+    border-bottom: 1px solid #ddd;
+}
+.handing
+{
+    background-image: url('../img/images/background12.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px; 
+    position: relative;
+}
+.handing .intro
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    max-width: 100%;
+}
+.handing .intro h1
+{
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+    color: green;
+}
+.handing .intro p
+{
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.5;
+    color: white;
+}
+.advan
+{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+.advan .container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+.advan .part
+{
+    padding: 20px;
+    text-align: center;
+    transition: all .7s ease-in-out;
+    cursor: grab;
+}
+.advan .part img
+{
+    width: 60px;
+}
+.advan .part h2
+{
+    font-weight: 800;
+    margin: 30px  0;
+}
+.advan .part p
+{
+    line-height: 1.5;
+    color: #777;
+    font-size: 17px;
+}
+.services
+{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.special-heading
+{
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+.special-heading + p
+{
+    margin: -30px 0 0;
+    font-size: 20px;
+    text-align: center;
+    color: #797979;
+}
+@media (max-width: 767px)
+{
+    .services .container h2
+    {
+        font-size: 60px;
+    }
+    .services .container p
+    {
+        margin-top: -20px;
+    }
+}
+.services .allcolum
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 100px;
+}
+.services .allcolum .col .srv
+{
+    display: flex;
+    margin-bottom: 40px;
+}
+.services .srv img 
+{
+    height: 40px;
+    width: 40px;
+}
+.services .allcolum .col .srv .text 
+{
+    flex: 1;
+}
+.services .allcolum .col .srv .text h3
+{
+    margin: 0 0 20px 10px;
+}
+.services .allcolum .col .srv .text p
+{
+    color: #444;
+    line-height: 1.6;
+    font-weight: 300;
+}
+@media (max-width: 767px) 
+{
+    .services .allcolum .srv 
+    {
+      flex-direction: column;
+      text-align: center;
+    }
+    .services .allcolum .col .srv .text h3
+    {
+        font-size: 25px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .services .srv img 
+    {
+        margin: auto;
+        width: 60px;
+        height: 60px;
+    }
+}
+.services .allcolum .col .theImage img
+{
+    width: 300px;
+}
+.services .allcolum .theImage
+{
+    text-align: center;
+    position: relative;
+}
+.services .allcolum .theImage::before
+{
+    content: "";
+    background-color: #3758b9;
+    width: 80px;
+    height: calc(100% + 80px);
+    top: -40px;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+@media (max-width: 1199px) 
+{
+    .services .allcolum .theImage::before
+    {
+      display: none;
+    }
+    .services .allcolum .col .theImage img
+    {
+        width: 350px;
+    }
+}
+.portfolio
+{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+.portfolio .container .allPort
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 70px;
+}
+.portfolio .container .allPort .port
+{
+    background-color: white;
+}
+.portfolio .container .allPort .port img
+{
+    max-width: 100%;
+}
+.portfolio .container .allPort .port .porttxt
+{
+    padding: 20px;
+}
+.portfolio .container .allPort .port .porttxt h3
+{
+    margin: 0;
+}
+.portfolio .container .allPort .port .porttxt p
+{
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+@media (max-width: 767px)
+{
+    .portfolio .container h2 
+    {
+        font-size: 60px;
+    }
+    .portfolio .container .allPort .port .porttxt h3 
+    {
+        text-align: center;
+    }
+    /* .thebtn
+    {
+    margin: auto;
+    } */
+}
+.thebtn
+{
+    margin-top: 40px;
+    text-align: center;
+}
+.thebtn .btn
+{
+    width: 120px;
+    height: 25px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px ;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.thebtn .btn:hover
+{
+    background-color: #777;
+    color: white;
+}
+.about
+{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.about .container .theall
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 130px;
+    margin-top: 80px;
+}
+.about .container .theall .all .theimgabout img
+{
+    width: 400px;
+}
+.about .theall .all .theimgabout
+{
+    text-align: center;
+    position: relative;
+}
+.about .theall .all .theimgabout::before
+{
+    content: "";
+    position: absolute;
+    background-color: #4171a0;
+    width: 80px;
+    height: calc(100% + 80px);
+    top: -40px;
+    left: 15px;
+    z-index: -1;
+}
+.about .theall .all .theimgabout::after
+{
+    top: -40px;
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 180px;
+    border-left: 80px solid rgb(95, 95, 212);
+    border-bottom: 70px solid rgb(95, 95, 212);
+    z-index: -1;
+    right: -60px;
+    bottom: -120px;
+}
+@media (max-width: 991px)
+{
+    .about .theall .all .theimgabout::before ,       .about .theall .all .theimgabout::after
+    {
+        display: none;
+    }
+    .about .container .theall .all .theimgabout img
+    {
+        width: 350px;
+    }
+}
+.about .container .theall .all .para1
+{
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.about .container .theall .all .para2
+{
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+@media (max-width: 767px)
+{
+    .about .container h2 
+    {
+        font-size: 60px;
+    }
+}
+.contact 
+{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+.contact .info
+{
+    text-align: center;
+    margin-top: 80px;
+}
+.contact .container .info p
+{
+    letter-spacing: -2px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3758b9;
+}
+.contact .container .info a
+{
+    letter-spacing: -1px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #63ac6f;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+.contact .container .info a:hover
+{
+    color: #3da14d;
+}
+.contact .container .info a:active
+{
+    color: #0ba424;
+}
+.contact .container .info .icons
+{
+    margin-top: 30px;
+}
+.contact .container .info .icons a img 
+{
+    width: 30px;
+    height: 30px;
+    margin-bottom: -10px;
+    margin-left: 10px;
+}
+.contact .container .info .icons::before
+{
+    content: "Find Us On Social Networking:";
+    color: #444;
+}
+@media (max-width: 767px)
+{
+    .contact .container h2 
+    {
+        font-size: 60px;
+    }
+    .contact .container .info p
+    {
+        font-size: 25px;
+    }
+    .contact .container .info a
+    {
+        font-size: 25px;
+    }
+    .contact .container .info .icons a img
+    {
+        margin-left: 2px;
+    }
+    .footer p
+    {
+        font-size: 17px;
+
+    }
+}
+.footer 
+{
+    background-color: rgb(26, 25, 25);
+    color: #f6f6f6;
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.footer span
+{
+    font-weight: bold;
+    color: #0d559c;
+}
